@@ -1,0 +1,123 @@
+/* limpar format~ções padrão */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-size: 1em;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	background-color: #e6e6e6;
+}
+#principal{
+	margin: 0px auto;
+	width: 920px;
+	padding: 15px;
+
+}
+
+#area-postagens{
+	float: left;
+	width: 660px;
+}
+
+#lateral{
+	float: right;
+	width: 240px;
+}
+
+#Tec{
+	font-size: 2.5em;
+	color:#4e4e4e ;
+	font-weight: bold;
+}
+#Blog{
+	color: white;
+	font-size: 2.5em;
+}
+
+#logo{
+	text-align: center;
+	padding: 35px;
+}
+
+#navbar{
+	background-color:#f7b600 ;
+	height: 150px;
+	position: relative;
+}
+
+#lista{
+	text-align:center;
+}
+
+ul{
+	list-style-type:none ;
+}
+
+li{
+	display: inline;
+}
+
+li a{
+	color: white;
+	text-decoration: none;
+	padding: 10px;
+}
+
+span a{
+	color:#f7b600 ;
+	text-decoration: none;
+
+}
+
+a:hover{
+	color: #f7b600;
+	background-color: white;
+}
+
+h2{
+	color: #f7b600;
+}
+
+h3{
+	color: #4e4e4e;
+	background-color: #CCC;
+	padding: 5px;
+}
+
+#rodape{
+	background-color: #CCC;
+	padding: 15px;
+	text-align: center;
+	margin: 20px 0;
+	clear: both;
+}
+
+.postagem{
+	background-color: white;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+#recentes{
+	background-color: white;
+	width: 200px;
+	height: 150px;
+	padding: 10px;
+	margin-bottom: 20px;
+	font-size: 0.8em;
+}
+
+#categorias{
+	background-color: white;
+	width: 200px;
+	height: 150px;
+	padding: 10px;
+}
+
+
+
+
+
+
