@@ -1,0 +1,170 @@
+/* Estrutura do site */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: "Trebuchet MS",Helvetica,sans-serif;
+	background: url(../imagens/fundo.png) repeat-x right top;
+}
+
+#container{
+	width: 750px;
+	margin: 0 auto;
+}
+
+#topo{
+	height: 150px;
+	background: url(../imagens/detalhe-topo.png) no-repeat right top;
+	padding-top: 25px;
+}
+
+#detalhe-topo{
+	float: right;
+}
+#logo{
+	padding: 10px;
+}
+
+ul{
+	list-style: none;
+}
+ul a{
+	text-decoration: none;
+}
+
+/* navegação */
+#menu-navegaçao ul{
+	margin-top: 30px;
+	background-color: #b10333;
+	float: left;
+}
+
+#menu-navegaçao li{
+	float: left;
+	background: url(../imagens/divisor.png) repeat-y right;
+}
+
+#menu-navegaçao li a{
+	text-decoration: none;
+	padding: 0.5em 1em;
+	line-height: 30px;
+	color: #fff;
+
+}
+
+/* formatando conteudo */
+.grid-container{
+	display: grid;
+	gap: 10px;
+	grid-template-columns: 180px auto auto;
+	clear: both;
+	margin-top: 80px;
+}
+
+.grid-container .caixa{
+	margin: 10px 0;
+	background: url(../imagens/fundo-caixa.png);
+}
+
+.grid-container h2{
+	color: #fff;
+	font-size: 16px;
+	background-color: #294c71;
+	padding: 5px;
+}
+.conteudo{
+	margin: 5px;
+	padding: 5px;
+	background: #fff;
+}
+.news{
+	height: fit-content;
+}
+
+.entrevistas li{
+	border-bottom: 1px solid #f3f3f3;
+}
+.entrevistas li a{
+	display: block;
+	color: black;
+	padding: px;
+	font-size: 0.8em;
+	line-height: 30px;
+	font-weight: bold;
+}
+.lista-noticias li{
+	height: 62px;
+	border-bottom: 1px solid #ccc;
+}
+
+.lista-noticias li:hover{
+	background-color: #eee;
+}
+
+/* formatação de texto */
+.destaque h3{
+	display: inline;
+	color: #fff;
+	background-color: #b10333;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	padding: 3px;
+}
+
+.destaque a{
+	color: #b10333;
+	text-decoration: underline;
+}
+.destaque a:hover{
+	color: red;
+}
+.ultima-entrevista h3{
+	display: inline;
+	color: black;
+	background-color: #de003e;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	padding: 3px;
+}
+
+.ultima-entrevista a{
+	color: #b10333;
+	text-decoration: underline;
+}
+.destaque a:hover{
+	color: red;
+}
+
+.lista-noticias li a h3{
+	color: #3e7ab9;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+.lista-noticias li a p{
+	color: black;
+	font-size: 0.7em;
+}
+
+
+
+/* imagens */
+.destaque .img-principal{
+	border: 3px solid #dfdfdf;
+}
+.lista-noticias img{
+	float: left;
+	width: 80px;
+	margin:5px;
+	clear: both;
+}
+
+/* botoes */
+.news #enviar{
+	background-color: #b10333;
+	color: #fff;
+	padding: 5px;
+	margin-top: 5px;
+}
+
