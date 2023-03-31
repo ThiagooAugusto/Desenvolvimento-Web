@@ -11,7 +11,6 @@ class Livro{
     validarDados() {
         for(let i in this) {
 			if(this[i] == undefined || this[i] == '' || this[i] == null) {
-                alert('Preencha todos valores!');
 				return false
 			}
 		}
@@ -62,14 +61,34 @@ function cadastrarLivro(){
 
     let livro = new Livro(nome.value, autor.value, editora.value, categoria.value, descricao.value);
 
+    
     if(livro.validarDados()){
         bd.gravar(livro);
+        document.getElementById('modal_titulo').innerHTML = 'Registro inserido com sucesso'
+	document.getElementById('modal_titulo_div').className = 'modal-header text-success'
+	document.getElementById('modal_conteudo').innerHTML = 'Livro foi cadastrada com sucesso!'
+	document.getElementById('modal_btn').innerHTML = 'Voltar'
+	document.getElementById('modal_btn').className = 'btn btn-success'
+        //dialog de sucesso
+	$('#modalRegistraLivro').modal('show') 
+
         nome.value = '';
         autor.value = '';
         editora.value = '';
         categoria.value = '';
         descricao.value = '';
-    }  
+    } 
+    else {
+		
+	document.getElementById('modal_titulo').innerHTML = 'Erro na inclusão do registro'
+	document.getElementById('modal_titulo_div').className = 'modal-header text-danger'
+	document.getElementById('modal_conteudo').innerHTML = 'Erro na gravação, verifique se todos os campos foram preenchidos corretamente!'
+	document.getElementById('modal_btn').innerHTML = 'Voltar e corrigir'
+	document.getElementById('modal_btn').className = 'btn btn-danger'
+
+	//dialog de erro
+	$('#modalRegistraLivro').modal('show') 
+	}  
 }
 
 function carregarLivros(listaLivros = Array(), filtro = false){
