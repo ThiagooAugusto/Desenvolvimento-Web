@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Livros</title>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+	<script type="text/javascript">
+		function getLivros() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.open('GET','http://localhost/ajax/livros.json')
+
+			xhttp.onreadystatechange = function(){
+				if(xhttp.readyState == 4 && xhttp.status == '200'){
+					let jsonLivros = JSON.parse(xhttp.responseText)
+
+					//console.log(jsonLivros)
+
+					for(let i in jsonLivros.livros){
+						let item = jsonLivros.livros[i]
+
+						let divRow = document.createElement('div')
+						let divCol = document.createElement('div')
+
+						divRow.className = 'row'
+						divCol.className = 'col'
+
+						let p1 = document.createElement('p')
+						p1.innerHTML = '<strong>Título: </strong>' + item.titulo
+
+						let p2 = document.createElement('p')
+						p2.innerHTML = '<strong>Autor: </strong>' + item.autor
+
+						let p3 = document.createElement('p')
+						p3.innerHTML = '<strong>Editora: </strong>' + item.editora
+
+						let p4 = document.createElement('p')
+						p4.innerHTML = '<strong>Sinopse: </strong>' + item.sinopse
+
+						let p5 = document.createElement('p')
+						p5.innerHTML = '<strong>Páginas: </strong>' + item.paginas
+
+						let hr = document.createElement('hr')
+
+						divRow.appendChild(divCol)
+						divCol.appendChild(p1)
+						divCol.appendChild(p2)
+						divCol.appendChild(p3)
+						divCol.appendChild(p4)
+						divCol.appendChild(p5)
+						divCol.appendChild(hr)
+
+
+
+						document.getElementById('lista').appendChild(divRow)
+						document.getElementById('botao').innerHTML = ''
+
+					}
+				}
+				if(xhttp.readyState == 4 && xhttp.status == '404'){
+					alert('Recurso não encontrado!')
+				}
+			}
+			xhttp.send()
+		}
+	</script>
+
+</head>
+<body>
+	<nav class="navbar navbar-light bg-light mb-4">
+		<div class="container">
+			<h3>Catálogo de livros</h3>
+		</div>
+	 </nav>
+
+	 <div class="container" id="lista">
+	 	 <div class="row mb-5">
+	 	 	<div id="botao" class="col">
+	 	 		<button  class="btn btn-success" onclick="getLivros()">Listar livros</button>
+	 	 	</div>
+	 	 </div>
+
+	 </div>
+	
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+	"livros":[
+		
+		{
+			"titulo":"Origin",
+			"autor":"Dan Brown",
+			"editora":"Double day",
+			"sinopse":"O professor Langdom investiga os misterios em roma",
+			"paginas":450
+		},
+		{
+			"titulo":"Os crimes perfeitos",
+			"autor":"Agatha Christie",
+			"editora":"LPM",
+			"sinopse":"Coleção de contos policiais com poirot",
+			"paginas":250
+		},
+		{
+			"titulo":"A história",
+			"autor":"The Zonderman Corporation",
+			"editora":"Sextante",
+			"sinopse":"A bíblia contada como uma só história do começo ao fim",
+			"paginas":250
+		}
+	]
+}
